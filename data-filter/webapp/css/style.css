@@ -1,0 +1,126 @@
+html[dir="ltr"] .myAppDemoWT .myCustomButton.sapMBtn {
+  margin-right: 0.125rem;
+}
+
+html[dir="rtl"] .myAppDemoWT .myCustomButton.sapMBtn {
+  margin-left: 0.125rem;
+  background-color: coral;
+}
+
+.myAppDemoWT .myCustomText {
+  display: inline-block;
+  font-weight: bold;
+  color: crimson;
+}
+.myDeleteButtonClass .sapMBtnIcon {
+  color: red;
+}
+.title {
+  font-weight: bold;
+  color: crimson;
+  text-align: center;
+  background-color: indianred;
+}
+.table {
+  margin-top: 3rem;
+  display: block;
+  margin-right: 3rem;
+  margin-left: 5rem;
+  margin-bottom: 4rem;
+  font-style: italic;
+  border-collapse: collapse !important;
+}
+.myButton {
+  margin-top: 1rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  width: 150px;
+  color: darkblue;
+}
+.field {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  padding-right: 0.5rem;
+  width: 200px;
+}
+.fragmentButton {
+  margin: 3px;
+  width: 100px;
+}
+
+.input {
+  text-align: center;
+}
+.myComboBox {
+  text-align: center;
+  padding-right: 1rem;
+}
+
+.myHbox {
+  margin-left: 8rem;
+  margin-top: 1rem;
+}
+
+.myEmailText {
+  text-decoration: crimson;
+  text-decoration: double;
+  margin-top: 1rem;
+}
+
+.myEmailInput {
+  margin: 3px;
+  width: 100px;
+}
+
+.editInput {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.editButton {
+  width: 1rem;
+  margin-left: 1rem;
+  margin-top: 0.3rem;
+  margin-right: 1rem;
+}
+
+.myLabel {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 80px;
+  color: darkred;
+  font-weight: bold;
+}
+
+.myEditComboBox {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.myTableLabel {
+  color: blue;
+}
+
+.customPage {
+  background-color: rgb(233, 227, 240); /* Background color */
+}
+
+.oddRow {
+  color: blueviolet;
+}
+
+.evenRow {
+  background-color: #f2f2f2;
+}
+
+.multiBox {
+  padding-top: 1rem;
+  width: 200px;
+}
+.myMultiBoxButton {
+  margin-top: 1.8rem;
+  margin-left: 1rem;
+}
+.myText1 {
+  color: rgb(194, 18, 171) !important ;
+}

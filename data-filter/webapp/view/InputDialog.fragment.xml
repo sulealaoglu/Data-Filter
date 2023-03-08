@@ -1,0 +1,18 @@
+<core:FragmentDefinition controllerName="com.myorg.myFilterApp.controller.Main" xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog id="dialogId" title="{dynamicModel>/title} " type="Message">
+        <content>
+            <HBox alignContent="Center" justifyContent="Center">
+                <ComboBox class="myComboBox" width="100%" id="dynamicBox" placeholder="{dynamicModel>/items/0/text}" items="{dynamicModel>/items}" layoutData="{alignContent:'Center', justifyContent:'Center'}">
+                    <core:ListItem text="{dynamicModel>text}" key="{dynamicModel>key}" />
+                </ComboBox>
+                <Input visible="{= ${dynamicModel>/showInput} === true }" id="fragment_input" class="input" placeholder="search..." width="200px" />
+                <Text visible="{= ${dynamicModel>/showMailField} === true }" text="@" class="myEmailText" width="50px" textAlign="Center" />
+                <Input visible="{= ${dynamicModel>/showMailField} === true }" id="fragment_input2" class="input" placeholder="search..." width="200px" />
+            </HBox>
+        </content>
+        <FlexBox justifyContent="Center">
+            <Button class="fragmentButton" id="confirmButton" text="Confirm" press="onConfirm" icon="sap-icon://accept" type="Accept" />
+            <Button class="fragmentButton" id="cancelButton" text="Cancel" press="onCancel" icon="sap-icon://decline" type="Reject" />
+        </FlexBox>
+    </Dialog>
+</core:FragmentDefinition>

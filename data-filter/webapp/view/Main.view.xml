@@ -1,0 +1,74 @@
+<mvc:View controllerName="com.myorg.myFilterApp.controller.Main" displayBlock="true" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core">
+    <Page class="customPage" title="FilterApp Project by Şule Alaoğlu">
+        <VBox justifyContent="Center">
+            <HBox class="myHbox" alignItems="Center" justifyContent="Center">
+                <ComboBox width="180px" class="field" id="comboBoxId" items="{selectOptions>/}" placeholder="choose filter value">
+                    <core:Item key="{selectOptions>key}" text="{selectOptions>value}" />
+                </ComboBox>
+                <Input class="field" width="100%" id="searchedItem" placeholder="search..." />
+                <CheckBox class="field" id="cbox" text="Shuffle" select="onCheckBoxClicked" />
+            </HBox>
+            <HBox alignItems="Center" justifyContent="Center">
+                <Button icon="sap-icon://filter" class="myButton" type="Emphasized" text="Filter" press="onFilterBtnClicked" />
+                <Button icon="sap-icon://database" class="myButton" type="Emphasized" text="Get All Data" press="getAllData" />
+                <Button icon="sap-icon://arrow-bottom" class="myButton" type="Emphasized" text="Download" press="download" />
+            </HBox>
+            <HBox alignItems="Center" justifyContent="Center">
+                <MultiComboBox width="600px" class="multiBox" placeholder="select fields you want to see" id="multiBox" items="{selectOptions>/}">
+                    <core:Item key="{selectOptions>key}" text="{selectOptions>value}" />
+                </MultiComboBox>
+                <Button class="myMultiBoxButton" icon="sap-icon://accept" type="Emphasized" text="OK" press="filterTableColumn" />
+                <Button class="myMultiBoxButton" icon="sap-icon://clear-filter" type="Emphasized" text="Clear" press="clearFilter" />
+            </HBox>
+
+            <Table sticky="ColumnHeaders" width="90%" growing="true" id="tab1" class="table" items="{/}">
+                <columns>
+                    <Column visible="{= ${columnModel>/show_id} === true }" width="75px">
+                        <Text text="ID" />
+                        <Button icon="sap-icon://filter" id="idBtn" text="ID" type="Transparent" press="onColumnBtnClicked" />
+                    </Column>
+
+                    <Column visible="{= ${columnModel>/show_name} === true }" width="150px">
+                        <Button icon="sap-icon://filter" id="nameBtn" text="Name" type="Transparent" press="onColumnBtnClicked" />
+                    </Column>
+
+                    <Column visible="{= ${columnModel>/show_surname} === true }" width="150px">
+                        <Button icon="sap-icon://filter" id="surnameBtn" text="Surname" type="Transparent" press="onColumnBtnClicked" />
+                    </Column>
+
+                    <Column visible="{= ${columnModel>/show_username} === true }" width="150px">
+                        <Button icon="sap-icon://filter" id="userNameBtn" text="UserName" type="Transparent" press="onColumnBtnClicked" />
+                    </Column>
+
+                    <Column visible="{= ${columnModel>/show_email} === true }" width="200px">
+                        <Button visible="{= ${columnModel>/show_email} === true }" icon="sap-icon://filter" id="emailBtn" text="Email" type="Transparent" press="onColumnBtnClicked" />
+                    </Column>
+
+                    <Column visible="{= ${columnModel>/show_gender} === true }" width="150px">
+                        <Button icon="sap-icon://filter" id="genderBtn" text="Gender" type="Transparent" press="onColumnBtnClicked" />
+                    </Column>
+                    <Column width="50px">
+                        <Text class="myTableLabel" text="Edit" />
+                    </Column>
+                    <Column width="50px">
+                        <Text class="myTableLabel" text="Delete" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text Align="Center" class="myText1" text="{id}" textAlign="Center" />
+                            <Text text="{name}" textAlign="Center" />
+                            <Text text="{surname}" textAlign="Center" />
+                            <Text text="{username}" textAlign="Center" />
+                            <Text text="{email}" textAlign="Center" />
+                            <Text text="{gender}" textAlign="Center" />
+                            <Button icon="sap-icon://edit" type="Accept" press="onEditBtnClicked" />
+                            <Button icon="sap-icon://delete" type="Reject" press="deleteRow" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </VBox>
+    </Page>
+</mvc:View>

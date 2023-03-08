@@ -1,0 +1,44 @@
+<core:FragmentDefinition controllerName="com.myorg.myFilterApp.controller.Main" xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog id="editDialog" title="Edit User " type="Message">
+        <content>
+            <FlexBox>
+                <VBox alignContent="Center" justifyContent="Center">
+                    <HBox alignItems="Center">
+                        <Label class="myLabel" text="Name:" />
+                        <Input editable="false" id="editName" class="editInput" placeholder="name" width="200px" />
+                    </HBox>
+                    <HBox alignItems="Center">
+                        <Label class="myLabel" text="Surname:" />
+                        <Input editable="false" id="editSurname" class="editInput" placeholder="surname" width="200px" />
+                    </HBox>
+                    <HBox alignItems="Center">
+                        <Label class="myLabel" text="UserName:" />
+                        <Input editable="false" id="editUserName" class="editInput" placeholder="username" width="200px" />
+                    </HBox>
+                    <HBox alignItems="Center">
+                        <Label class="myLabel" text="Email:" />
+                        <Input editable="false" id="editEmail" class="editInput" placeholder="e-mail" width="200px" />
+                    </HBox>
+                    <HBox alignItems="Center">
+                        <Label class="myLabel" text="Gender:" />
+                        <ComboBox editable="false" class="myEditComboBox" id="editGender" placeholder="{dynamicModel>/items/0/text}" items="{dynamicModel>/items}" layoutData="{alignContent:'Center', justifyContent:'Center'}">
+                            <core:ListItem text="{dynamicModel>text}" key="{dynamicModel>key}" />
+                        </ComboBox>
+                    </HBox>
+                </VBox>
+
+                <VBox>
+                    <Button class="editButton" id="editNameBtn" press="handleLockButton" icon="sap-icon://locked" type="Reject" />
+                    <Button class="editButton" id="editSurnameBtn" press="handleLockButton" icon="sap-icon://locked" type="Reject" />
+                    <Button class="editButton" id="editUserNameBtn" press="handleLockButton" icon="sap-icon://locked" type="Reject" />
+                    <Button class="editButton" id="editEmailBtn" press="handleLockButton" icon="sap-icon://locked" type="Reject" />
+                    <Button class="editButton" id="editGenderBtn" press="handleLockButton" icon="sap-icon://locked" type="Reject" />
+                </VBox>
+            </FlexBox>
+        </content>
+        <FlexBox justifyContent="Center">
+            <Button class="fragmentButton" id="confirmButton" text="Confirm" press="onEditConfirm" icon="sap-icon://accept" type="Accept" />
+            <Button class="fragmentButton" id="cancelButton" text="Cancel" press="onCancel" icon="sap-icon://decline" type="Reject" />
+        </FlexBox>
+    </Dialog>
+</core:FragmentDefinition>

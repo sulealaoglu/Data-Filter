@@ -1,0 +1,15 @@
+{
+  "generator-ui5-ts-app": {
+    "application": "myFilterApp",
+    "namespace": "com.myorg",
+    "framework": "OpenUI5",
+    "frameworkVersion": "1.110.0",
+    "author": "sulealaoglu",
+    "initrepo": true,
+    "tstypes": "@openui5/ts-types-esm",
+    "tstypesVersion": "1.110.0",
+    "appId": "com.myorg.myFilterApp",
+    "appURI": "com/myorg/myFilterApp",
+    "setupCompleted": true
+  }
+}
